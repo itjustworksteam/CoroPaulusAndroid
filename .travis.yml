@@ -23,3 +23,13 @@ cache:
   - $HOME/.gradle
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
+deploy:
+  provider: releases
+  api_key:
+    secure: AzapBYHllrcEcwhUBW0oYDQ/kB8+CVxxxRURjT/eZHqonlCAPCdnkAHUaTZRBqq6by00STTaUwlXjnySbmkHr3O4I46YuKbCS8uoOeQEXxYOZEkuSqs+1jGq4mVCoyutbLAYK8cRxpr0tqCqj2puzcls8mxbF7wSi1XrDVPyTNg3ztiDlggzVSiWBIMN5uMSucDdLyH7BnmIIUUtqItXfS5XXWRvOpAVD6GOkKtpJT0JphQVarlqSmjlwEAZE8VLwiElUBOoA39Q3qga9URgcDXf+D5xvRONmdBnrN4iSscBPppMPmGLH5nWcA3fJ90PObpzL8f4KsvrxbJAsW8ZwN5LC/b40iMUmyPrCH7eSQzbu1P9pag1VyXoiklkcoRQttQDcEB14hTNilSIgJtFhu1wo6DGh0rF1PuuP3rPPWccmkoZ7Tg6HkekvGaCkI8rJb57Yjcyk7zOD4WbY+riPrtOxBAGQ+La8cUDfZ8GwKyg02+ZhBRR3gpUZaZt5Ie3kM2vz8UcmYf6CvzYbOr+TUD3G9HHjBsazZksp9JNDBLoUYLdI/g5hd2DmO19aWfL9vbopUJy4pOweKNlJyMD7WLBjq1NuOdLO192sqzGfJL7pW95ee+iXDAMwDoPbk2rarpVIAeAkF5gb/z/B1dCcZL/fWzvFDKcMbtVE2nrmhQ=
+  file: app/build/outputs/apk/app*release*.apk
+  file_glob: "true"
+  skip_cleanup: true
+  on:
+    branch: master
+    repo: itjustworksteam/CoroPaulusAndroid
